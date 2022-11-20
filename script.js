@@ -2,7 +2,7 @@
 let startQuizBtn = document.querySelector("#startQuiz");
 let questionDiv = document.querySelector("#questions");
 let questions = [
-  { title: "Who do you call or beep if you want to reach them?", choices: ["Your mom", "Kim Possible", "Scooby-Doo", "David Blaine"] },
+  { title: "Who do you call or beep if you want to reach them?", choices: ["Your mom", "Kim Possible", "Scooby-Doo", "David Blaine"], answer: "Kim Possible" },
   { titleTwo: "What do we wear on Wednesdays?", choices: ["Fur", "Jordans", "Pink", "Braces"] },
   { titleThree: "If it is not delivery, then what is it?", choices: ["Door Dash", "Jimmy Johns", "Uber Eats", "Digiorno"] },
   { titleFour: "What does BTW mean?", choices: ["By the Way", "Better Tag Wise", "Beautiful Trustful Woman", "Bite the Wing"] },
@@ -17,7 +17,7 @@ let questions = [
 // functions
 function startQuiz() {
   alert("May the Odds Be Forever in Your Favor");
-
+  startTimer();
   // add first queston
   let title = document.createElement("h2");
   title.textContent = questions[0].title;
@@ -301,3 +301,39 @@ function startQuiz() {
 
 // function calls
 startQuizBtn.addEventListener("click", startQuiz);
+
+let question = 1;
+questionDiv.addEventListener("click", function (event) {
+  if (question >= 10) {
+    let initials = prompt("What are your initials?");
+    clearInterval(timer);
+    localStorage.setItem("score", JSON.stringify({ initials, time }));
+    window.location.reload();
+    return;
+  }
+  if (event.target.nodeName === "BUTTON") {
+    let choice = event.target.innerHTML;
+    let answer = event.target.dataset.answer;
+    if (choice === answer) {
+      alert("correct!");
+    } else if (choice !== answer) {
+      alert("Wrong!");
+      time = time - 3;
+    }
+    question++;
+  }
+});
+
+let time = 60;
+let timer;
+function startTimer() {
+  timer = setInterval(function () {
+    if (time > 0) {
+      time--;
+      document.querySelector(".timer").innerText = "Time: " + time;
+    } else {
+      clearInterval(timer);
+    }
+  }, 1000);
+}
+document.querySelector(".score").innerText = JSON.parse(localStorage.getItem("score")).initials + " " + JSON.parse(localStorage.getItem("score")).time;
