@@ -3,15 +3,15 @@ let startQuizBtn = document.querySelector("#startQuiz");
 let questionDiv = document.querySelector("#questions");
 let questions = [
   { title: "Who do you call or beep if you want to reach them?", choices: ["Your mom", "Kim Possible", "Scooby-Doo", "David Blaine"], answer: "Kim Possible" },
-  { titleTwo: "What do we wear on Wednesdays?", choices: ["Fur", "Jordans", "Pink", "Braces"] },
-  { titleThree: "If it is not delivery, then what is it?", choices: ["Door Dash", "Jimmy Johns", "Uber Eats", "Digiorno"] },
-  { titleFour: "What does BTW mean?", choices: ["By the Way", "Better Tag Wise", "Beautiful Trustful Woman", "Bite the Wing"] },
-  { titleFive: "What is the correct motto?", choices: ["Oh Well", "Better Safe Than Sorry", "YOLO", "It is what it is"] },
-  { titleSix: "Who wants candy?", choices: ["Willy Wonka", "Aaron Carter", "Candyman", "Spongebob"] },
-  { titleSeven: "Teach me how to ____", choices: ["Cat Daddy", "Jerk", "Dougie", "Long Board"] },
-  { titleEight: "Tennis Shoes + Skating = ____", choices: ["Heelys", "RipStick", "Hover Board", "Roller Blades"] },
-  { titleNine: "What causes the most pain to your shin?", choices: ["spider bites", "running too far", "scooters", "falling"] },
-  { titleTen: "How many licks does it take to get to the center of a Tootsie Pop?", choices: ["808", "the world may never know", "at least 300", "1738"] },
+  { titleTwo: "What do we wear on Wednesdays?", choices: ["Fur", "Jordans", "Pink", "Braces"], answer: "Pink" },
+  { titleThree: "If it is not delivery, then what is it?", choices: ["Door Dash", "Jimmy Johns", "Uber Eats", "Digiorno"], answer: "Digiorno" },
+  { titleFour: "What does BTW mean?", choices: ["By the Way", "Better Tag Wise", "Beautiful Trustful Woman", "Bite the Wing"], answer: "By the Way" },
+  { titleFive: "What is the correct motto?", choices: ["Oh Well", "Better Safe Than Sorry", "YOLO", "It is what it is"], answer: "YOLO" },
+  { titleSix: "Who wants candy?", choices: ["Willy Wonka", "Aaron Carter", "Candyman", "Spongebob"], answer: "Aaron Carter" },
+  { titleSeven: "Teach me how to ____", choices: ["Cat Daddy", "Jerk", "Dougie", "Long Board"], answer: "Dougie" },
+  { titleEight: "Tennis Shoes + Skating = ____", choices: ["Heelys", "RipStick", "Hover Board", "Roller Blades"], answer: "Heelys" },
+  { titleNine: "What causes the most pain to your shin?", choices: ["spider bites", "running too far", "scooters", "falling"], answer: "scooters" },
+  { titleTen: "How many licks does it take to get to the center of a Tootsie Pop?", choices: ["808", "the world may never know", "at least 300", "1738"], answer: "the world may never know" },
 ];
 
 // functions
