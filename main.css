@@ -46,6 +46,8 @@ header {
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-around; 
+        font-size: larger;
+        color: honeydew;
 }
 h1, p {
         display: flex;
@@ -54,17 +56,48 @@ h1, p {
 }
 
 p {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+h1 {
+    
+        font-size: -webkit-xxx-large;
+        padding: 8rem;
+    
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
     padding: 2rem;
+    
+        font-size: x-large;
+        color: honeydew;
+    
 }
 
 #startQuiz {
     
         display: flex;
         margin: auto;
-    
+            font-size: x-large;
+            background: repeating-linear-gradient(45deg, black, transparent 100px);
+            color: white;
+            
 }
 
 #questions {
     display: flex;
     flex-direction: column;
+}
+
+button {
+    background-color: darkgray;
+    border-width: thick;
+    font-size: 1rem;
 }
