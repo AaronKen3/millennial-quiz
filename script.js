@@ -16,7 +16,7 @@ let questions = [
 
 // functions
 function startQuiz() {
-  alert("May the Odds Be Forever in Your Favor");
+  alert("Time starts after you press OK ");
   startTimer();
   // add first queston
   let title = document.createElement("h2");
@@ -333,6 +333,7 @@ function startTimer() {
       document.querySelector(".timer").innerText = "Time: " + time;
     } else {
       clearInterval(timer);
+      alert("Time is up!");
     }
   }, 1000);
 }
