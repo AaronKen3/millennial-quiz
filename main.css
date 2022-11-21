@@ -1,0 +1,27 @@
+header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+}
+h1, p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+p {
+    padding: 2rem;
+}
+
+#startQuiz {
+    
+        display: flex;
+        margin: auto;
+    
+}
+
+#questions {
+    display: flex;
+    flex-direction: column;
+}
